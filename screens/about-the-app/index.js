@@ -21,7 +21,7 @@ const AboutTheAppScreen = () => {
         
         
       </View>
-    <View style={styles.ypUtWRFy}><TextInput style={styles.cfczHiuX} value="Username" clearTextOnFocus={true}></TextInput><TextInput style={styles.fkuqjMOd} value="Password"></TextInput><Text style={styles.RAqsYivI}>{"Login:"}</Text><ImageBackground style={styles.DPpEmgzX} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground><View style={styles.pLosKTHA}></View><Text style={styles.xoeZOZpn}>{"Create new profile!"}</Text></View></SafeAreaView>;
+    <View style={styles.ypUtWRFy}><TextInput style={styles.cfczHiuX} value="Username" clearTextOnFocus={true}></TextInput><TextInput style={styles.fkuqjMOd} value="Password"></TextInput><Text style={styles.RAqsYivI}>{"Login:"}</Text><ImageBackground style={styles.DPpEmgzX} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground><View style={styles.pLosKTHA}></View><Text style={styles.xoeZOZpn}>{"Create new profile"}</Text><Text style={styles.nuhQMktJ}>{"Sign In"}</Text></View></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -111,6 +111,18 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: 73.5,
     top: 507
+  },
+  nuhQMktJ: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 20,
+    borderRadius: 0,
+    color: "#ffffff",
+    textAlign: "center",
+    position: "absolute",
+    left: 128,
+    top: 459
   }
 });
 export default AboutTheAppScreen;
