@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import { TextInput } from "react-native";
 import { ImageBackground } from "react-native";
 import React, { useState, useEffect } from "react";
@@ -21,14 +22,14 @@ const AboutTheAppScreen = () => {
         
         
       </View>
-    <View style={styles.ypUtWRFy}><TextInput style={styles.cfczHiuX} value="Username" clearTextOnFocus={true}></TextInput><TextInput style={styles.fkuqjMOd} value="Password"></TextInput><Text style={styles.RAqsYivI}>{"Login:"}</Text><ImageBackground style={styles.DPpEmgzX} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground><View style={styles.pLosKTHA}></View><Text style={styles.xoeZOZpn}>{"Create new profile"}</Text><Text style={styles.nuhQMktJ}>{"Sign In"}</Text></View></SafeAreaView>;
+    <View style={styles.ypUtWRFy}><TextInput style={styles.cfczHiuX} value="Username" clearTextOnFocus={true}></TextInput><TextInput style={styles.fkuqjMOd} value="Password"></TextInput><Text style={styles.RAqsYivI}>{"Login:"}</Text><ImageBackground style={styles.DPpEmgzX} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground><Pressable><View style={styles.pLosKTHA}></View></Pressable><Text style={styles.xoeZOZpn}>{"Create new profile"}</Text><Text style={styles.nuhQMktJ}>{"Sign In"}</Text></View></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "flex-start",
-    backgroundColor: "#fff"
+    backgroundColor: "#000000"
   },
   imgScroller: {
     flexDirection: "column",
@@ -55,8 +56,8 @@ const styles = StyleSheet.create({
     width: 248,
     height: 30,
     position: "absolute",
-    left: 54,
-    top: 327
+    left: 53,
+    top: 290
   },
   fkuqjMOd: {
     backgroundColor: "#FFE94B",
@@ -65,17 +66,17 @@ const styles = StyleSheet.create({
     height: 30,
     position: "absolute",
     left: 54,
-    top: 377
+    top: 344
   },
   RAqsYivI: {
     width: 156,
     height: 80,
     lineHeight: 26,
-    fontSize: 27,
+    fontSize: 17,
     borderRadius: 0,
     position: "absolute",
-    left: 51,
-    top: 298,
+    left: 54,
+    top: 266,
     textAlign: "left",
     fontFamily: "Crimson Text",
     color: "#ffffff"
@@ -84,8 +85,8 @@ const styles = StyleSheet.create({
     width: 361,
     height: 215,
     position: "absolute",
-    left: -2.5,
-    top: 36
+    left: -2,
+    top: 22
   },
   pLosKTHA: {
     height: 44,
@@ -94,8 +95,8 @@ const styles = StyleSheet.create({
     borderRadius: 21,
     color: "#777777",
     position: "absolute",
-    left: 70,
-    top: 447,
+    left: 71,
+    top: 392,
     borderWidth: 4,
     borderColor: "#ffe62c",
     opacity: 1
@@ -110,7 +111,7 @@ const styles = StyleSheet.create({
     color: "#ffe62c",
     position: "absolute",
     left: 73.5,
-    top: 507
+    top: 467
   },
   nuhQMktJ: {
     width: 100,
@@ -122,7 +123,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     position: "absolute",
     left: 128,
-    top: 459
+    top: 402
   }
 });
 export default AboutTheAppScreen;
