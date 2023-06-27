@@ -1,3 +1,4 @@
+import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { ImageBackground } from "react-native";
 import React from "react";
@@ -27,7 +28,9 @@ const LoginScreen = () => {
         </Text>
       </TouchableOpacity>
       <ImageBackground style={styles.backgroundImage} source={require("./background.jpg")} resizeMode="cover"><ImageBackground style={styles.DdlUlTJb} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground></ImageBackground>
-    </View>;
+    <Pressable onPress={() => {
+      navigation.navigate("forgotPassword");
+    }}><Text style={styles.NHJSACXL}>{"Forgot password?"}</Text></Pressable></View>;
 };
 
 const styles = StyleSheet.create({
@@ -106,6 +109,17 @@ const styles = StyleSheet.create({
     position: "absolute",
     left: -41,
     top: 24
+  },
+  NHJSACXL: {
+    width: 151,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 16,
+    borderRadius: 0,
+    position: "absolute",
+    left: 104,
+    color: "#ffffff",
+    top: 550
   }
 });
 export default LoginScreen;
