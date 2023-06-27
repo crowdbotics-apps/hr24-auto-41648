@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import { Text, View, TouchableOpacity, Image, StyleSheet, TextInput, TouchableHighlight } from "react-native";
 
@@ -79,12 +80,6 @@ const styles = StyleSheet.create({
   mb20: {
     marginBottom: 20
   },
-  forgotPassword: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginBottom: 40
-  },
   loginContainer: {
     width: "80%",
     alignSelf: "center"
@@ -140,7 +135,10 @@ const styles = StyleSheet.create({
 export default Signup;
 
 const Button = props => {
-  return <TouchableHighlight onPress={props.onPress} underlayColor='#DDDDDD'>
+  const navigation = useNavigation();
+  return <TouchableHighlight onPress={() => {
+    navigation.navigate("profile");
+  }} underlayColor='#DDDDDD'>
       <View style={[btnStyles.button, {
       backgroundColor: props.backgroundColor ? props.backgroundColor : "#000000",
       height: props.height ? props.height : 49,
