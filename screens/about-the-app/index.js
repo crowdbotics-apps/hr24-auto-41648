@@ -1,3 +1,4 @@
+import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
 import { TextInput } from "react-native";
 import { ImageBackground } from "react-native";
@@ -5,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, SafeAreaView, Image } from "react-native";
 
 const AboutTheAppScreen = () => {
+  const navigation = useNavigation();
   const [ImageSource, setImageSource] = useState();
   const [text1, setText1] = useState("");
   const [text2, setText2] = useState("");
@@ -22,7 +24,9 @@ const AboutTheAppScreen = () => {
         
         
       </View>
-    <View style={styles.ypUtWRFy}><TextInput style={styles.cfczHiuX} value="Username" clearTextOnFocus={true}></TextInput><TextInput style={styles.fkuqjMOd} value="Password"></TextInput><Text style={styles.RAqsYivI}>{"Login:"}</Text><ImageBackground style={styles.DPpEmgzX} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground><Pressable><View style={styles.pLosKTHA}></View></Pressable><Text style={styles.xoeZOZpn}>{"Create new profile"}</Text><Text style={styles.nuhQMktJ}>{"Sign In"}</Text></View></SafeAreaView>;
+    <View style={styles.ypUtWRFy}><TextInput style={styles.cfczHiuX} value="Username" clearTextOnFocus={true}></TextInput><TextInput style={styles.fkuqjMOd} value="Password"></TextInput><Text style={styles.RAqsYivI}>{"Login:"}</Text><ImageBackground style={styles.DPpEmgzX} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground><Pressable onPress={() => {
+        navigation.navigate("Untitled10");
+      }}><View style={styles.pLosKTHA}></View></Pressable><Text style={styles.xoeZOZpn}>{"Create new profile"}</Text><Text style={styles.nuhQMktJ}>{"Sign In"}</Text></View></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
