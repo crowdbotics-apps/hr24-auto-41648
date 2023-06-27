@@ -45,7 +45,7 @@ const Profile = () => {
           </Button>
         </View>
       </View>
-    <CheckBox title="Space for Rent"></CheckBox><CheckBox title="DIYer"></CheckBox></ScrollView>;
+    <CheckBox title="Space for Rent"></CheckBox><CheckBox title="DIYer"></CheckBox><TextInput></TextInput></ScrollView>;
 };
 
 const styles = StyleSheet.create({
@@ -103,7 +103,12 @@ const styles = StyleSheet.create({
   },
   mainBody: {
     // height: '60%'
-    backgroundColor: "#FFE94B"
+    backgroundColor: "#FFE94B",
+    position: "absolute",
+    left: 18,
+    top: 246,
+    width: 303,
+    height: 368
   },
   btnSave: {
     display: "flex",
@@ -182,7 +187,7 @@ const profileStyles = StyleSheet.create({
 
 const Input = props => {
   return <View>
-      <TextInput style={inputStyles.input} placeholder={props.placeholder} value={props.value} onChangeText={num => props.setValue(num)} placeholderTextColor="#ddd" editable={props.editable !== false} />
+      <TextInput style={inputStyles.input} placeholder={props.placeholder} value={props.value} onChangeText={num => props.setValue(num)} placeholderTextColor="#fff" editable={props.editable !== false} />
       {props.errorText ? <Text style={inputStyles.error}>{props.errorText}</Text> : null}
     </View>;
 };
