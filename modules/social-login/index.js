@@ -1,3 +1,5 @@
+import { signupRequest } from "./auth/index.js";
+import { useEffect } from "react";
 import { StyleSheet } from "react-native";
 import React from "react";
 import { View, ImageBackground, Image, Text, TouchableOpacity, ScrollView } from "react-native";
@@ -74,6 +76,20 @@ function LoginSignupTabs({
             <View style={styles.tabContainerStyle}>
               {descriptors[state.routes[state.index].key].render()}
             </View>
+            <View style={styles.socialLoginContainer}>
+              <Text style={styles.socialLoginText}>Or connect with:</Text>
+              <View style={styles.socialLoginButtonsContainer}>
+                <TouchableOpacity style={styles.socialLoginButton}>
+                  <Image source={require("./assets/images/facebook.png")} style={styles.socialLoginIcon} />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.socialLoginButton}>
+                  <Image source={require("./assets/images/google.png")} style={styles.socialLoginIcon} />
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.socialLoginButton}>
+                  <Image source={require("./assets/images/twitter.png")} style={styles.socialLoginIcon} />
+                </TouchableOpacity>
+              </View>
+            </View>
           </View>
         </ScrollView>
       </KeyboardAwareScrollView>
@@ -97,6 +113,9 @@ const LoginScreen = () => {
 const Stack = createStackNavigator();
 
 const LoginSignup = () => {
+  useEffect(() => {
+    dispatch(signupRequest());
+  }, []);
   return <Stack.Navigator headerMode="none" style={_styles.SpNPGWaK}>
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="PasswordReset" component={PasswordReset} />
