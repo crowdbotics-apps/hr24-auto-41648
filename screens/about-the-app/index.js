@@ -1,6 +1,5 @@
 import { useNavigation } from "@react-navigation/native";
 import { Pressable } from "react-native";
-import { TextInput } from "react-native";
 import { ImageBackground } from "react-native";
 import React, { useState, useEffect } from "react";
 import { Text, StyleSheet, View, SafeAreaView, Image } from "react-native";
@@ -24,9 +23,9 @@ const AboutTheAppScreen = () => {
         
         
       </View>
-    <View style={styles.ypUtWRFy}><TextInput style={styles.cfczHiuX} value="Username" clearTextOnFocus={true}></TextInput><TextInput style={styles.fkuqjMOd} value="Password"></TextInput><Text style={styles.RAqsYivI}>{"Login:"}</Text><ImageBackground style={styles.DPpEmgzX} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground><Pressable onPress={() => {
-        navigation.navigate("Untitled10");
-      }}><View style={styles.pLosKTHA}></View></Pressable><Text style={styles.xoeZOZpn}>{"Create new profile"}</Text><Text style={styles.nuhQMktJ}>{"Sign In"}</Text></View></SafeAreaView>;
+    <View style={styles.ypUtWRFy}><Text style={styles.RAqsYivI}>{"Welcome to the 24hr Auto App! This is where tinkerers, DIYers and mechanics come to find there workspaces."}</Text><ImageBackground style={styles.DPpEmgzX} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground><Pressable onPress={() => {
+        navigation.navigate("Untitled14");
+      }}><View style={styles.pLosKTHA}></View></Pressable><Text style={styles.nuhQMktJ}>{"Get started!"}</Text></View></SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
@@ -54,33 +53,15 @@ const styles = StyleSheet.create({
     borderRadius: 0,
     color: "#777777"
   },
-  cfczHiuX: {
-    backgroundColor: "#ffe94b",
-    borderColor: "#cccccc",
-    width: 248,
-    height: 30,
-    position: "absolute",
-    left: 53,
-    top: 290
-  },
-  fkuqjMOd: {
-    backgroundColor: "#FFE94B",
-    borderColor: "#cccccc",
-    width: 248,
-    height: 30,
-    position: "absolute",
-    left: 54,
-    top: 344
-  },
   RAqsYivI: {
-    width: 156,
+    width: 239,
     height: 80,
     lineHeight: 26,
     fontSize: 17,
     borderRadius: 0,
     position: "absolute",
-    left: 54,
-    top: 266,
+    left: 44,
+    top: 243,
     textAlign: "left",
     fontFamily: "Crimson Text",
     color: "#ffffff"
@@ -100,25 +81,13 @@ const styles = StyleSheet.create({
     color: "#777777",
     position: "absolute",
     left: 71,
-    top: 392,
+    top: 462,
     borderWidth: 4,
     borderColor: "#ffe62c",
     opacity: 1
   },
-  xoeZOZpn: {
-    width: 209,
-    height: 50,
-    lineHeight: 14,
-    fontSize: 14,
-    borderRadius: 0,
-    textAlign: "center",
-    color: "#ffe62c",
-    position: "absolute",
-    left: 73.5,
-    top: 467
-  },
   nuhQMktJ: {
-    width: 100,
+    width: 138,
     height: 50,
     lineHeight: 14,
     fontSize: 20,
@@ -126,8 +95,8 @@ const styles = StyleSheet.create({
     color: "#ffffff",
     textAlign: "center",
     position: "absolute",
-    left: 128,
-    top: 402
+    left: 109,
+    top: 475
   }
 });
 export default AboutTheAppScreen;
