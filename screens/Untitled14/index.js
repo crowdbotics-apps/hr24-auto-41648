@@ -1,6 +1,5 @@
 import { Pressable } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { ImageBackground } from "react-native";
 import React from "react";
 import { StyleSheet, View, Text, TextInput, TouchableOpacity } from "react-native";
 
@@ -10,7 +9,9 @@ const LoginScreen = () => {
       <Text style={styles.title}>Login</Text>
       <TextInput style={styles.input} placeholder="Email" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry={true} />
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={() => {
+      navigation.navigate("Maps");
+    }}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
       <Text style={styles.or}>OR</Text>
@@ -21,13 +22,13 @@ const LoginScreen = () => {
         <Text style={styles.socialButtonText}>Connect with Google</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.signupButton} onPress={() => {
-      navigation.navigate("login");
+      navigation.navigate("signup");
     }}>
         <Text style={styles.signupButtonText}>
           Don't have an account? Sign up
         </Text>
       </TouchableOpacity>
-      <ImageBackground style={styles.backgroundImage} source={require("./background.jpg")} resizeMode="cover"><ImageBackground style={styles.DdlUlTJb} source={require("./24hrauto3sm.jpg")} resizeMode="cover"></ImageBackground></ImageBackground>
+      
     <Pressable onPress={() => {
       navigation.navigate("forgotPassword");
     }}><Text style={styles.NHJSACXL}>{"Forgot password?"}</Text></Pressable></View>;
@@ -68,7 +69,10 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "#000000",
     fontSize: 18,
-    fontWeight: "bold"
+    fontWeight: "bold",
+    width: 275,
+    height: 36,
+    textAlign: "center"
   },
   or: {
     fontSize: 16,
@@ -95,20 +99,6 @@ const styles = StyleSheet.create({
   signupButtonText: {
     color: "#FFFFFF",
     fontSize: 16
-  },
-  backgroundImage: {
-    width: "100%",
-    height: "100%",
-    position: "absolute",
-    left: 157,
-    top: 6
-  },
-  DdlUlTJb: {
-    width: 127,
-    height: 70,
-    position: "absolute",
-    left: -41,
-    top: 24
   },
   NHJSACXL: {
     width: 151,

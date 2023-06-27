@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   container: {
     padding: 20,
-    backgroundColor: "#FFF",
+    backgroundColor: "#FFE94B",
     height: "100%"
   },
   inputSection: {
